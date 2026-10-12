@@ -1,0 +1,30 @@
+Backend Server Started Successfully! 🚀
+The backend server is now running on http://localhost:8000 (Docs available at http://localhost:8000/docs). The frontend is also active at http://localhost:5173.
+
+Step-by-Step Instructions to Run the Backend
+If you ever need to start or restart the backend server in your terminal, follow these steps:
+
+Method 1: Standard Python Run (Recommended for Windows PowerShell)
+Open a PowerShell terminal and navigate to the backend directory:
+powershell
+cd server_side/backend
+Run the server directly using python:
+powershell
+python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+Method 2: Using Virtual Environment (.venv)
+If you prefer using the local .venv:
+
+Open PowerShell and navigate to the backend directory:
+
+powershell
+cd server_side/backend
+Activate the virtual environment (Note the dot . in .\.venv):
+
+powershell
+.\.venv\Scripts\Activate.ps1
+(If PowerShell gives a script execution policy error, run Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process first).
+
+Start the backend:
+
+powershell
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
